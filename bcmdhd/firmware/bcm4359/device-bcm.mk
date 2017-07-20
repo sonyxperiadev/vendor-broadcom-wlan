@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
-
 BCM_FW_SRC_FILE_STA := fw_bcmdhd.bin
 BCM_FW_SRC_FILE_AP  := fw_bcmdhd_apsta.bin
 
 PRODUCT_COPY_FILES += \
     vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/$(BCM_FW_SRC_FILE_STA):$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.bin \
-    vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/$(BCM_FW_SRC_FILE_AP):$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd_apsta.bin
+    vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/$(BCM_FW_SRC_FILE_AP):$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd_apsta.bin \
+    vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
